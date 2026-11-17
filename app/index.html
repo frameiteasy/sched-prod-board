@@ -17,7 +17,17 @@
       <p data-testid="loader" class="loader" role="status">Loading incidents…</p>
       <p data-testid="empty" class="empty" hidden>No incidents tonight.</p>
       <p class="error" role="alert" hidden></p>
-      <ul data-testid="incident-list" class="list"></ul>
+      <div class="layout">
+        <ul data-testid="incident-list" class="list"></ul>
+        <aside data-testid="incident-panel" class="panel" aria-live="polite" hidden>
+          <p class="panel-id"></p>
+          <p class="panel-sev"></p>
+          <p class="panel-what"></p>
+          <p class="panel-time"></p>
+          <button type="button" data-testid="panel-ack" class="ack">Ack</button>
+          <p class="panel-acked" hidden>acked</p>
+        </aside>
+      </div>
     </main>
     <footer>sched-prod incident board · build <span data-testid="build-sha">__BUILD_SHA__</span></footer>
   </body>
